@@ -42,16 +42,5 @@ namespace AdaptiveUI
             "Uno",
             "Platform"
         };
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var button = (Button)sender;
-            button.Background = new SolidColorBrush(
-                Windows.UI.Color.FromArgb(
-                    (byte)_random.Next(256),
-                    (byte)_random.Next(256),
-                    (byte)_random.Next(256),
-                    (byte)_random.Next(256)));
-        }
     }
 }

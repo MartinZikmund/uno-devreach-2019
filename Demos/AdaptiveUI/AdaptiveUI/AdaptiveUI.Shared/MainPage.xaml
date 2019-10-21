@@ -14,7 +14,7 @@
         <VisualState x:Name="NormalView" />
         <VisualState x:Name="WideView">
           <VisualState.StateTriggers>
-            <AdaptiveTrigger MinWindowWidth="800" />
+            <AdaptiveTrigger MinWindowWidth="600" />
           </VisualState.StateTriggers>
           <VisualState.Setters>
             <Setter Target="ItemsGridView.Visibility" Value="Visible" />
@@ -23,23 +23,6 @@
         </VisualState>
       </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="*"/>
-    </Grid.RowDefinitions>
-
-
-    <Button Background="YellowGreen" Margin="0,0,0,12" Click="Button_Click">
-      <Button.Template>
-        <ControlTemplate>
-          <Border Width="100" Height="100" CornerRadius="50" Background="{TemplateBinding Background}">
-            <TextBlock Text="Hello, Uno!" HorizontalAlignment="Center" VerticalAlignment="Center" />
-          </Border>
-        </ControlTemplate>
-      </Button.Template>
-    </Button>
-
 
     <ListView x:Name="ItemsListView" Grid.Row="1" ItemsSource="{x:Bind Items}">
       <ListView.ItemContainerStyle>
